@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+// 2. **Questão de Verificação de Número Primo:**
+
+//    Escreva um programa que utilize um loop `while` para verificar se um número fornecido pelo usuário é um número primo ou não. O programa deve usar uma estrutura `if` para realizar a verificação e fornecer uma saída apropriada.
+
+
+int main() {
+    int numero, i=2;
+    int primo=1;
+    
+    printf("digite um numero inteiro positivo:");
+    scanf("%d",&numero);
+    
+    if(numero<2){
+        primo=0;
+    }else{
+        while(i<=numero/2){
+            if(numero%i==0){
+                primo=0;
+                
+            }
+            i++;
+        }
+    }
+   if(primo){
+       printf("%d e um numero primo.\n",numero);
+   }else{
+       printf("%d nao e um numero primo.\n",numero);
+   
+   }
+    return 0;
+}
